@@ -1,0 +1,49 @@
+{
+  "name": "paapi5-nodejs-sdk-sample",
+  "version": "1.0.0",
+  "description": "ProductAdvertisingAPI 5.0 NodeJS SDK",
+  "license": "Apache-2.0",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --recursive",
+    "lint": "eslint sampleGetBrowseNodesApi.js sampleGetItemsApi.js sampleSearchItemsApi.js sampleGetVariationsApi.js src/auth/*.js"
+  },
+  "author": {
+    "name": "Product Advertising API",
+    "email": "",
+    "url": "https://webservices.amazon.com/paapi5/documentation/index.html"
+  },
+  "homepage": "https://github.com/amzn/paapi5-nodejs-sdk",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amzn/paapi5-nodejs-sdk"
+  },
+  "browser": {
+    "fs": false
+  },
+  "dependencies": {
+    "ckey": "^1.0.2",
+    "crypto-js": "^3.1.9-1",
+    "paapi5-nodejs-sdk": "^1.0.1",
+    "superagent": "3.7.0"
+  },
+  "devDependencies": {
+    "mocha": "~2.3.4",
+    "sinon": "1.17.3",
+    "expect.js": "~0.3.1",
+    "eslint": "^5.8.0"
+  },
+  "keywords": [
+    "amazon",
+    "pa-api",
+    "paapi",
+    "paapi5.0",
+    "paapi5",
+    "paapi5-nodejs-sdk",
+    "getitems",
+    "searchitems",
+    "getvariations",
+    "getbrowsenodes",
+    "ProductAdvertisingAPI"
+  ]
+}
