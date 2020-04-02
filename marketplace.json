@@ -1,81 +1,97 @@
 { "Marketplace" : [
         {
         "Locale": "Australia",
+        "Web": "www.amazon.com.au",
         "Host": "webservices.amazon.com.au",
         "Region": "us-west-2"
         },
         {
         "Locale": "Brazil",
+        "Web": "www.amazon.com.br",
         "Host": "webservices.amazon.com.br",
         "Region": "us-east-1"
         },
         {
         "Locale": "Canada",
+        "Web": "www.amazon.ca",
         "Host": "webservices.amazon.ca",
         "Region": "us-east-1"
         },
         {
         "Locale": "France",
+        "Web": "www.amazon.fr",
         "Host": "webservices.amazon.fr",
         "Region": "eu-west-1"
         },
         {
         "Locale": "Germany",
+        "Web": "www.amazon.de",
         "Host": "webservices.amazon.de",
         "Region": "eu-west-1"
         },
         {
         "Locale": "India",
+        "Web": "www.amazon.in",
         "Host": "webservices.amazon.in",
         "Region": "eu-west-1"
         },
         {
         "Locale": "Italy",
+        "Web": "www.amazon.it",
         "Host": "webservices.amazon.it",
         "Region": "eu-west-1"
         },
         {
         "Locale": "Japan",
+        "Web": "www.amazon.co.jp",
         "Host": "webservices.amazon.co.jp",
         "Region": "us-west-2"
         },
         {
         "Locale": "Mexico",
+        "Web": "www.amazon.com.mx",
         "Host": "webservices.amazon.com.mx",
         "Region": "us-east-1"
         },
         {
         "Locale": "Netherlands",
+        "Web": "www.amazon.nl",
         "Host": "webservices.amazon.nl",
         "Region": "eu-west-1"
         },
         {
         "Locale": "Singapore",
+        "Web": "www.amazon.sg",
         "Host": "webservices.amazon.sg",
         "Region": "us-west-2"
         },
         {
         "Locale": "Spain",
+        "Web": "www.amazon.es",
         "Host": "webservices.amazon.es",
         "Region": "eu-west-1"
         },
         {
         "Locale": "Turkey",
+        "Web": "www.amazon.com.tr",
         "Host": "webservices.amazon.com.tr",
         "Region": "eu-west-1"
         },
         {
         "Locale": "United Arab Emirates",
+        "Web": "www.amazon.ae",
         "Host": "webservices.amazon.ae",
         "Region": "eu-west-1"
         },
         {
         "Locale": "United Kingdom",
+        "Web": "www.amazon.co.uk",
         "Host": "webservices.amazon.co.uk",
         "Region": "eu-west-1"
         },
         {
         "Locale": "United States",
+        "Web": "www.amazon.com",
         "Host": "webservices.amazon.com",
         "Region": "us-east-1"
         }
