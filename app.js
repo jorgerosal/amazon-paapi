@@ -13,46 +13,46 @@ const apiRequest = async (Options) => {
   defaultClient.host = marketPlaceDetails.Host;
   defaultClient.region = marketPlaceDetails.Region;
 
-  let operationOptions = getDefaultOperationOptions(Options.Operations);
+  let operationOptions = getDefaultOperation(Options.Operations);
   operationOptions['PartnerTag'] = commonParameters.PartnerTag;
   operationOptions['PartnerType'] = commonParameters.PartnerType;
   Object.assign(operationOptions, Options.requestParameters);
 
-  return await api.getItems(operationOptions);
+  return await api[Options.Operations](operationOptions);
 };
 
 const GetItems = async (commonParameters, requestParameters) => {
-  let Options = { commonParameters, requestParameters, Operations : "GetItems" };
+  let Options = { commonParameters, requestParameters, Operations : "getItems" };
   return await apiRequest(Options);
 };
 
-const GetBrowseItems = async (commonParameters, requestParameters) => {
-  let Options = { commonParameters, requestParameters, Operations : "GetBrowseItems" };
+const GetBrowseNodes = async (commonParameters, requestParameters) => {
+  let Options = { commonParameters, requestParameters, Operations : "getBrowseNodes" };
   return await apiRequest(Options);
 };
 
 const GetVariations = async (commonParameters, requestParameters) => {
-  let Options = { commonParameters, requestParameters, Operations : "GetVariations" };
+  let Options = { commonParameters, requestParameters, Operations : "getVariations" };
   return await apiRequest(Options);
 };
 
 const SearchItems = async (commonParameters, requestParameters) => {
-  let Options = { commonParameters, requestParameters, Operations : "SearchItems" };
+  let Options = { commonParameters, requestParameters, Operations : "searchItems" };
   return await apiRequest(Options);
 };
 
-const getDefaultOperationOptions = method => {
+const getDefaultOperation = method => {
   switch (method) {
-    case 'GetItems':
+    case 'getItems':
       return new paapiSdk.GetItemsRequest();
       break;
-    case 'GetBrowseItems':
+    case 'getBrowseItems':
       return new paapiSdk.GetBrowseNodesRequest();
       break;
-    case 'GetVariations':
+    case 'getVariations':
       return new paapiSdk.GetVariationsRequest();
       break;
-    case 'SearchItems':
+    case 'searchItems':
       return new paapiSdk.SearchItemsRequest();
   }
 };
@@ -60,11 +60,9 @@ const getDefaultOperationOptions = method => {
 const getMarketplaceDetails = marketplace => new Promise ((resolve, reject) => {
   if(isUndefined(marketplace)) { // set US as default
     let marketPlaceDetail = marketplaceList.Marketplace.filter(x => x.Web === "www.amazon.com")[0];
-    resolve(marketPlaceDetail); // default value if not defined.
+    resolve(marketPlaceDetail); 
   } else { 
-    
     let marketPlaceDetail = marketplaceList.Marketplace.filter(x => x.Web === marketplace.toLowerCase())[0];
-
     if(isUndefined(marketPlaceDetail)) reject("Invalid Marketplace Value.");
     resolve(marketPlaceDetail);
   }
@@ -77,5 +75,4 @@ const getPartnerType = partnerType =>  new Promise ((resolve, reject) => {
 
 const isUndefined = value => typeof value === 'undefined'; 
 
-
-module.exports = { GetItems, GetBrowseItems, GetVariations, SearchItems };
+module.exports = { GetItems, GetBrowseNodes, GetVariations, SearchItems };
