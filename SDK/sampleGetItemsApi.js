@@ -26,10 +26,9 @@ var ProductAdvertisingAPIv1 = require('paapi5-nodejs-sdk')
 var defaultClient = ProductAdvertisingAPIv1.ApiClient.instance;
 
 
-const ck = require('ckey')
 // Specify your credentials here. These are used to create and sign the request.
-defaultClient.accessKey = ck.AWS_ACCESS_KEY;
-defaultClient.secretKey = ck.AWS_SECRET_KEY;
+defaultClient.accessKey = '<YOUR ACCESS KEY>';
+defaultClient.secretKey = '<YOUR SECRET KEY>';
 
 /**
  * PAAPI Host and Region to which you want to send request.
@@ -45,7 +44,7 @@ var api = new ProductAdvertisingAPIv1.DefaultApi();
 var getItemsRequest = new ProductAdvertisingAPIv1.GetItemsRequest();
 
 /** Enter your partner tag (store/tracking id) and partner type */
-getItemsRequest['PartnerTag'] = ck.AWS_TAG;
+getItemsRequest['PartnerTag'] = '<YOUR PARTNER TAG>';
 getItemsRequest['PartnerType'] = 'Associates';
 
 /** Enter the Item IDs for which item information is desired */
