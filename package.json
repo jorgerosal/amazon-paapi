@@ -1,6 +1,6 @@
 {
   "name": "amazon-paapi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Amazon Associate Product Advertising API for NodeJs. A PAAPI 5.0 Extension.",
   "main": "app.js",
   "repository": {
