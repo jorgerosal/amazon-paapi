@@ -156,6 +156,7 @@ In the mean time, please check amazon  [documentation](https://webservices.amazo
 ### Donation
 If this somehow makes your job a bit easier, please consider dropping few bucks.
 Your contribution allows me to spend more time improving features of this project.
+
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2N243HNZCXY7J&source=url)
 
 ### License
