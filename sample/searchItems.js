@@ -1,6 +1,5 @@
-// const amazonPaapi = require('amazon-paapi');
-const amazonPaapi = require('../app.js')
-const ck = require('ckey'); 
+const amazonPaapi = require('amazon-paapi');
+const ck = require('ckey'); // access .env variables
 
 
 const commonParameters = { 
