@@ -11,6 +11,40 @@ A **clean** wrapper for amazon's [NodeJs SDK.](https://webservices.amazon.com/pa
 ```bash
 npm install amazon-paapi --save
 ```
+
+## Quickstart
+```js
+const amazonPaapi = require('amazon-paapi');
+
+const commonParameters = {
+	'AccessKey' : '<YOUR  ACCESS  KEY>',
+	'SecretKey' : '<YOUR  SECRET  KEY>',
+	'PartnerTag' : '<YOUR  PARTNER  TAG>', // yourtag-20
+	'PartnerType': 'Associates', // Optional. Default value is Associates.
+	'Marketplace': 'www.amazon.com' // Optional. Default value is US.
+};
+
+const requestParameters = {
+    'ASIN' : 'B07H65KP63',
+    'Resources' : [
+        'ItemInfo.Title',
+        'Offers.Listings.Price',
+        'VariationSummary.VariationDimension'
+      ]
+};
+
+/** Promise */
+amazonPaapi.GetVariations(commonParameters, requestParameters)
+    .then(data => {
+        // do something with the success response.
+        console.log(data);
+    })
+    .catch(error => {
+        // catch an error.
+        console.log(error)
+    });
+```
+
 ## Usage
 ```js
 const amazonPaapi = require('amazon-paapi');
@@ -148,6 +182,7 @@ In the mean time, please check amazon  [documentation](https://webservices.amazo
 
 - How can I do itemLookup using a UPC or EAN?
 *You can lookup using searchItems operation. Add your UPC or EAN under the keyword parameter. More details [here](https://webservices.amazon.com/paapi5/documentation/use-cases/search-with-external-identifiers.html).*
+
 - What if I included an invalid ASIN value in ASIN array parameter? 
 *You will get an error response but the result of the valid ASINs are still included in the response data. Please refer to the last portion of this [page](https://webservices.amazon.com/paapi5/documentation/troubleshooting/processing-of-errors.html).*
 
