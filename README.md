@@ -1,4 +1,5 @@
 # amazon-paapi
+[![npm version](https://badge.fury.io/js/amazon-paapi.svg)](https://badge.fury.io/js/amazon-paapi)
 
 Amazon Associate Product Advertising API for NodeJs. A PAAPI 5.0 Extension.
 
