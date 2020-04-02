@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Amazon Associate Product Advertising API for NodeJs. A PAAPI 5.0 Extension.",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jorgerosal/amazon-associate-api.git"
@@ -16,10 +13,21 @@
     "url": "https://github.com/jorgerosal/amazon-associate-api/issues"
   },
   "homepage": "https://github.com/jorgerosal/amazon-associate-api#readme",
+  "keywords": [
+    "paapi5",
+    "PA-API 5.0",
+    "aws associate",
+    "product advertising api",
+    "amazon paapi sdk nodejs",
+    "amazon itemlookup",
+    "amazon getItems",
+    "amazon searchItems",
+    "amazon browseNodeRequest",
+    "amazon getVariation"
+  ],
   "dependencies": {
     "ckey": "^1.0.2",
     "crypto-js": "^4.0.0",
-    "paapi5-nodejs-sdk": "1.0.0",
     "superagent": "^5.2.2"
   }
 }
