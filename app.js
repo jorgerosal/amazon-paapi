@@ -46,7 +46,7 @@ const getDefaultOperation = method => {
     case 'getItems':
       return new paapiSdk.GetItemsRequest();
       break;
-    case 'getBrowseItems':
+    case 'getBrowseNodes':
       return new paapiSdk.GetBrowseNodesRequest();
       break;
     case 'getVariations':
