@@ -84,6 +84,12 @@
         "Region": "eu-west-1"
         },
         {
+        "Locale": "Saudi Arabia",
+        "Web": "www.amazon.sa",
+        "Host": "webservices.amazon.sa",
+        "Region": "eu-west-1"
+        },
+        {
         "Locale": "United Kingdom",
         "Web": "www.amazon.co.uk",
         "Host": "webservices.amazon.co.uk",
