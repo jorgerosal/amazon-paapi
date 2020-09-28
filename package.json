@@ -5,14 +5,17 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jorgerosal/amazon-associate-api.git"
+    "url": "git+https://github.com/jorgerosal/amazon-paapi.git"
   },
   "author": "Jorge Rosal",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jorgerosal/amazon-associate-api/issues"
+    "url": "https://github.com/jorgerosal/amazon-paapi/issues"
   },
-  "homepage": "https://github.com/jorgerosal/amazon-associate-api#readme",
+  "homepage": "https://github.com/jorgerosal/amazon-paapi#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "keywords": [
     "paapi5",
     "PA-API 5.0",
@@ -26,7 +29,6 @@
     "amazon getVariation"
   ],
   "dependencies": {
-    "ckey": "^1.0.2",
     "crypto-js": "^4.0.0",
     "superagent": "^5.2.2"
   }
