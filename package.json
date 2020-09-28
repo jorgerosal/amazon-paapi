@@ -13,9 +13,6 @@
     "url": "https://github.com/jorgerosal/amazon-associate-api/issues"
   },
   "homepage": "https://github.com/jorgerosal/amazon-associate-api#readme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "keywords": [
     "paapi5",
     "PA-API 5.0",
