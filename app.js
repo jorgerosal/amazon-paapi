@@ -76,5 +76,6 @@ const getPartnerType = partnerType =>  new Promise ((resolve, reject) => {
 const isUndefined = value => typeof value === 'undefined'; 
 
 const amazonPaapi = { GetItems, GetBrowseNodes, GetVariations, SearchItems };
-// Allow use of default import syntax in TypeScript
-module.exports.default = amazonPaapi;
+
+module.exports = { ...amazonPaapi, default : amazonPaapi}; // Allow use of default import syntax in TypeScript.
+
