@@ -78,6 +78,12 @@
       if (data.hasOwnProperty('Name')) {
         obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
       }
+      if (data.hasOwnProperty('FeedbackCount')) {
+        obj['FeedbackCount'] = ApiClient.convertToType(data['FeedbackCount'], 'Number');
+      }
+      if (data.hasOwnProperty('FeedbackRating')) {
+        obj['FeedbackRating'] = ApiClient.convertToType(data['FeedbackRating'], 'Number');
+      }
     }
     return obj;
   }
@@ -94,10 +100,16 @@
    * @member {String} Name
    */
   exports.prototype['Name'] = undefined;
+  /**
+   * @member {Number} FeedbackCount
+   */
+  exports.prototype['FeedbackCount'] = undefined;
+  /**
+   * @member {Number} FeedbackRating
+   */
+  exports.prototype['FeedbackRating'] = undefined;
 
 
 
   return exports;
 }));
-
-
