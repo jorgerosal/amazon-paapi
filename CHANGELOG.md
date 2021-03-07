@@ -1,6 +1,10 @@
 ## Change Log
 
-    1.0.4 March 07, 2021
+    1.0.5 March 07, 2021
+
+- Update marketplace list. Added Poland and Sweden
+
+  1.0.4 March 07, 2021
 
 - Updated documentation to avoid confusion with the Marketplace value when someone tried to add Host and Region.
 - SDK Update.
