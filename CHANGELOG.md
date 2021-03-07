@@ -1,6 +1,11 @@
 ## Change Log
 
-1.0.3 October 14, 2020
+    1.0.4 March 07, 2021
+
+- Updated documentation to avoid confusion with the Marketplace value when someone tried to add Host and Region.
+- SDK Update.
+
+  1.0.3 October 14, 2020
 
 - Patch to revert back support module.exports for require
 
