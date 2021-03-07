@@ -22,32 +22,32 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/MultiValuedAttribute', 'model/SingleStringValuedAttribute'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./MultiValuedAttribute'), require('./SingleStringValuedAttribute'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.ProductAdvertisingAPIv1) {
       root.ProductAdvertisingAPIv1 = {};
     }
-    root.ProductAdvertisingAPIv1.TechnicalInfo = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.MultiValuedAttribute, root.ProductAdvertisingAPIv1.SingleStringValuedAttribute);
+    root.ProductAdvertisingAPIv1.OfferConditionNote = factory(root.ProductAdvertisingAPIv1.ApiClient);
   }
-}(this, function(ApiClient, MultiValuedAttribute, SingleStringValuedAttribute) {
+}(this, function(ApiClient) {
   'use strict';
 
 
 
 
   /**
-   * The TechnicalInfo model module.
-   * @module model/TechnicalInfo
+   * The OfferConditionNote model module.
+   * @module model/OfferConditionNote
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>TechnicalInfo</code>.
-   * @alias module:model/TechnicalInfo
+   * Constructs a new <code>OfferConditionNote</code>.
+   * @alias module:model/OfferConditionNote
    * @class
    */
   var exports = function() {
@@ -58,34 +58,34 @@
   };
 
   /**
-   * Constructs a <code>TechnicalInfo</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>OfferConditionNote</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/TechnicalInfo} obj Optional instance to populate.
-   * @return {module:model/TechnicalInfo} The populated <code>TechnicalInfo</code> instance.
+   * @param {module:model/OfferConditionNote} obj Optional instance to populate.
+   * @return {module:model/OfferConditionNote} The populated <code>OfferConditionNote</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('EnergyEfficiencyClass')) {
-        obj['EnergyEfficiencyClass'] = SingleStringValuedAttribute.constructFromObject(data['EnergyEfficiencyClass']);
+      if (data.hasOwnProperty('Locale')) {
+        obj['Locale'] = ApiClient.convertToType(data['Locale'], 'String');
       }
-      if (data.hasOwnProperty('Formats')) {
-        obj['Formats'] = MultiValuedAttribute.constructFromObject(data['Formats']);
+      if (data.hasOwnProperty('Value')) {
+        obj['Value'] = ApiClient.convertToType(data['Value'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {module:model/SingleStringValuedAttribute} EnergyEfficiencyClass
+   * @member {String} Locale
    */
-  exports.prototype['EnergyEfficiencyClass'] = undefined;
+  exports.prototype['Locale'] = undefined;
   /**
-   * @member {module:model/MultiValuedAttribute} Formats
+   * @member {String} Value
    */
-  exports.prototype['Formats'] = undefined;
+  exports.prototype['Value'] = undefined;
 
 
 

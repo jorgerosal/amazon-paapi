@@ -184,6 +184,11 @@
      */
     "Offers.Listings.Condition": "Offers.Listings.Condition",
     /**
+     * value: "Offers.Listings.Condition.ConditionNote"
+     * @const
+     */
+    "Offers.Listings.Condition.ConditionNote": "Offers.Listings.Condition.ConditionNote",
+    /**
      * value: "Offers.Listings.Condition.SubCondition"
      * @const
      */
@@ -298,6 +303,11 @@
      * @const
      */
     "RentalOffers.Listings.Condition": "RentalOffers.Listings.Condition",
+    /**
+     * value: "RentalOffers.Listings.Condition.ConditionNote"
+     * @const
+     */
+    "RentalOffers.Listings.Condition.ConditionNote": "RentalOffers.Listings.Condition.ConditionNote",
     /**
      * value: "RentalOffers.Listings.Condition.SubCondition"
      * @const

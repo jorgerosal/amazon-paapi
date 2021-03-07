@@ -21,10 +21,9 @@
  * https://webservices.amazon.com/paapi5/documentation/get-items.html
  */
 
-// var ProductAdvertisingAPIv1 = require('./src/index');
-var ProductAdvertisingAPIv1 = require('paapi5-nodejs-sdk')
-var defaultClient = ProductAdvertisingAPIv1.ApiClient.instance;
+var ProductAdvertisingAPIv1 = require('./src/index');
 
+var defaultClient = ProductAdvertisingAPIv1.ApiClient.instance;
 
 // Specify your credentials here. These are used to create and sign the request.
 defaultClient.accessKey = '<YOUR ACCESS KEY>';

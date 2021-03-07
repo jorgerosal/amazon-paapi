@@ -56,6 +56,8 @@
 
 
 
+
+
   };
 
   /**
@@ -72,17 +74,17 @@
       if (data.hasOwnProperty('DefaultShippingCountry')) {
         obj['DefaultShippingCountry'] = ApiClient.convertToType(data['DefaultShippingCountry'], 'String');
       }
-      if (data.hasOwnProperty('Id')) {
-        obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
-      }
-      if (data.hasOwnProperty('Name')) {
-        obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
-      }
       if (data.hasOwnProperty('FeedbackCount')) {
         obj['FeedbackCount'] = ApiClient.convertToType(data['FeedbackCount'], 'Number');
       }
       if (data.hasOwnProperty('FeedbackRating')) {
         obj['FeedbackRating'] = ApiClient.convertToType(data['FeedbackRating'], 'Number');
+      }
+      if (data.hasOwnProperty('Id')) {
+        obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
+      }
+      if (data.hasOwnProperty('Name')) {
+        obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
       }
     }
     return obj;
@@ -93,14 +95,6 @@
    */
   exports.prototype['DefaultShippingCountry'] = undefined;
   /**
-   * @member {String} Id
-   */
-  exports.prototype['Id'] = undefined;
-  /**
-   * @member {String} Name
-   */
-  exports.prototype['Name'] = undefined;
-  /**
    * @member {Number} FeedbackCount
    */
   exports.prototype['FeedbackCount'] = undefined;
@@ -108,8 +102,18 @@
    * @member {Number} FeedbackRating
    */
   exports.prototype['FeedbackRating'] = undefined;
+  /**
+   * @member {String} Id
+   */
+  exports.prototype['Id'] = undefined;
+  /**
+   * @member {String} Name
+   */
+  exports.prototype['Name'] = undefined;
 
 
 
   return exports;
 }));
+
+

@@ -22,18 +22,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/OfferSubCondition'], factory);
+    define(['ApiClient', 'model/OfferConditionNote', 'model/OfferSubCondition'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./OfferSubCondition'));
+    module.exports = factory(require('../ApiClient'), require('./OfferConditionNote'), require('./OfferSubCondition'));
   } else {
     // Browser globals (root is window)
     if (!root.ProductAdvertisingAPIv1) {
       root.ProductAdvertisingAPIv1 = {};
     }
-    root.ProductAdvertisingAPIv1.OfferCondition = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.OfferSubCondition);
+    root.ProductAdvertisingAPIv1.OfferCondition = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.OfferConditionNote, root.ProductAdvertisingAPIv1.OfferSubCondition);
   }
-}(this, function(ApiClient, OfferSubCondition) {
+}(this, function(ApiClient, OfferConditionNote, OfferSubCondition) {
   'use strict';
 
 
@@ -52,6 +52,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -86,6 +87,9 @@
       if (data.hasOwnProperty('SubCondition')) {
         obj['SubCondition'] = OfferSubCondition.constructFromObject(data['SubCondition']);
       }
+      if (data.hasOwnProperty('ConditionNote')) {
+        obj['ConditionNote'] = OfferConditionNote.constructFromObject(data['ConditionNote']);
+      }
     }
     return obj;
   }
@@ -110,6 +114,10 @@
    * @member {module:model/OfferSubCondition} SubCondition
    */
   exports.prototype['SubCondition'] = undefined;
+  /**
+   * @member {module:model/OfferConditionNote} ConditionNote
+   */
+  exports.prototype['ConditionNote'] = undefined;
 
 
 

@@ -1,5 +1,5 @@
 {
-  "name": "paapi5-nodejs-sdk-sample",
+  "name": "paapi5-nodejs-sdk",
   "version": "1.0.0",
   "description": "ProductAdvertisingAPI 5.0 NodeJS SDK",
   "license": "Apache-2.0",
@@ -22,10 +22,8 @@
     "fs": false
   },
   "dependencies": {
-    "ckey": "^1.0.2",
-    "crypto-js": "^3.1.9-1",
-    "paapi5-nodejs-sdk": "^1.0.1",
-    "superagent": "3.7.0"
+    "superagent": "3.7.0",
+    "crypto-js": "^3.1.9-1"
   },
   "devDependencies": {
     "mocha": "~2.3.4",
