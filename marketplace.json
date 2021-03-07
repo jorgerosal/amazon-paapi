@@ -61,6 +61,12 @@
       "Region": "eu-west-1"
     },
     {
+      "Locale": "Poland",
+      "Web": "www.amazon.pl",
+      "Host": "webservices.amazon.pl",
+      "Region": "eu-west-1"
+    },
+    {
       "Locale": "Singapore",
       "Web": "www.amazon.sg",
       "Host": "webservices.amazon.sg",
@@ -76,6 +82,12 @@
       "Locale": "Spain",
       "Web": "www.amazon.es",
       "Host": "webservices.amazon.es",
+      "Region": "eu-west-1"
+    },
+    {
+      "Locale": "Sweden",
+      "Web": "www.amazon.se",
+      "Host": "webservices.amazon.se",
       "Region": "eu-west-1"
     },
     {
