@@ -14,7 +14,7 @@ const requestParameters = {
     'Keywords' : 'Harry Potter',
     'SearchIndex' : 'Books',
     'ItemCount' : 2,
-    'Resource': ['Images.Primary.Medium', 'ItemInfo.Title', 'Offers.Listings.Price']
+    'Resources': ['Images.Primary.Medium', 'ItemInfo.Title', 'Offers.Listings.Price']
 };
 
 /** Promise */
