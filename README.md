@@ -157,7 +157,7 @@ const requestParameters = {
   Keywords: 'Harry Potter',
   SearchIndex: 'Books',
   ItemCount: 2,
-  Resource: [
+  Resources: [
     'Images.Primary.Medium',
     'ItemInfo.Title',
     'Offers.Listings.Price',
