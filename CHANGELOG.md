@@ -1,4 +1,11 @@
 ## Change Log
+    1.0.7 August 30, 2022
+
+- Add querystring module from main package.json. legacy dependency used by the SDK.
+
+    1.0.6 June 01, 2021
+
+- Update sample code typo
 
     1.0.5 March 07, 2021
 
