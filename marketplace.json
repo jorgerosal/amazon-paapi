@@ -7,6 +7,12 @@
       "Region": "us-west-2"
     },
     {
+      "Locale": "Belgium",
+      "Web": "www.amazon.com.be",
+      "Host": "webservices.amazon.com.be",
+      "Region": "eu-west-1"
+    },     
+    {
       "Locale": "Brazil",
       "Web": "www.amazon.com.br",
       "Host": "webservices.amazon.com.br",
