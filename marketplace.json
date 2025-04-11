@@ -119,6 +119,18 @@
       "Web": "www.amazon.com",
       "Host": "webservices.amazon.com",
       "Region": "us-east-1"
+    },
+    {
+      "Locale": "Ireland",
+      "Web": "www.amazon.ie",
+      "Host": "webservices.amazon.ie",
+      "Region": "eu-west-1"
+    },
+    {
+      "Locale": "Belgium",
+      "Web": "www.amazon.com.be",
+      "Host": "webservices.amazon.com.be",
+      "Region": "eu-west-1"
     }
   ]
 }
