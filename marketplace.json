@@ -131,6 +131,12 @@
       "Web": "www.amazon.com.be",
       "Host": "webservices.amazon.com.be",
       "Region": "eu-west-1"
+    },
+    {
+      "Locale": "Egypt",
+      "Web": "www.amazon.eg",
+      "Host": "webservices.amazon.eg",
+      "Region": "eu-west-1"
     }
   ]
 }
