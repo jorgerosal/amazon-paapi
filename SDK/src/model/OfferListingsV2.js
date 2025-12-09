@@ -52,12 +52,17 @@
    * @extends Array
    */
   var exports = function() {
-    var _this = this;
-    _this = new Array();
-    Object.setPrototypeOf(_this, exports);
-
-    return _this;
+    // var _this = [];
+    //
+    // Object.setPrototypeOf(this, exports.prototype);
+    // Object.setPrototypeOf(this, Object.create(Array.prototype));
+    Object.setPrototypeOf(this, []);
+    //
+    return [];
   };
+
+  // Make OfferListingsV2 properly extend Array
+  // exports.prototype = Object.create(Array.prototype);
 
   /**
    * Constructs a <code>OfferListingsV2</code> from a plain JavaScript object, optionally creating a new instance.
@@ -69,7 +74,7 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      ApiClient.constructFromObject(data, obj, 'OfferListingV2');
+      ApiClient.constructFromObject(data, obj, OfferListingV2);
 
     }
     return obj;
