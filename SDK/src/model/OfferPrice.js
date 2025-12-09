@@ -1,5 +1,5 @@
 /**
- * Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -22,18 +22,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/OfferSavings'], factory);
+    define(['ApiClient', 'model/OfferSavings', 'model/PriceType'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./OfferSavings'));
+    module.exports = factory(require('../ApiClient'), require('./OfferSavings'), require('./PriceType'));
   } else {
     // Browser globals (root is window)
     if (!root.ProductAdvertisingAPIv1) {
       root.ProductAdvertisingAPIv1 = {};
     }
-    root.ProductAdvertisingAPIv1.OfferPrice = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.OfferSavings);
+    root.ProductAdvertisingAPIv1.OfferPrice = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.OfferSavings, root.ProductAdvertisingAPIv1.PriceType);
   }
-}(this, function(ApiClient, OfferSavings) {
+}(this, function(ApiClient, OfferSavings, PriceType) {
   'use strict';
 
 
@@ -52,6 +52,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -83,6 +85,12 @@
       if (data.hasOwnProperty('PricePerUnit')) {
         obj['PricePerUnit'] = ApiClient.convertToType(data['PricePerUnit'], 'Number');
       }
+      if (data.hasOwnProperty('PriceType')) {
+        obj['PriceType'] = PriceType.constructFromObject(data['PriceType']);
+      }
+      if (data.hasOwnProperty('PriceTypeLabel')) {
+        obj['PriceTypeLabel'] = ApiClient.convertToType(data['PriceTypeLabel'], 'String');
+      }
       if (data.hasOwnProperty('Savings')) {
         obj['Savings'] = OfferSavings.constructFromObject(data['Savings']);
       }
@@ -106,6 +114,14 @@
    * @member {Number} PricePerUnit
    */
   exports.prototype['PricePerUnit'] = undefined;
+  /**
+   * @member {module:model/PriceType} PriceType
+   */
+  exports.prototype['PriceType'] = undefined;
+  /**
+   * @member {String} PriceTypeLabel
+   */
+  exports.prototype['PriceTypeLabel'] = undefined;
   /**
    * @member {module:model/OfferSavings} Savings
    */

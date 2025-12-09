@@ -1,5 +1,5 @@
 /**
- * Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -22,12 +22,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Availability', 'model/BrowseNode', 'model/BrowseNodeAncestor', 'model/BrowseNodeChild', 'model/BrowseNodeInfo', 'model/BrowseNodesResult', 'model/ByLineInfo', 'model/Classifications', 'model/Condition', 'model/ContentInfo', 'model/ContentRating', 'model/Contributor', 'model/CustomerReviews', 'model/DeliveryFlag', 'model/DimensionBasedAttribute', 'model/DurationPrice', 'model/ErrorData', 'model/ExternalIds', 'model/GetBrowseNodesRequest', 'model/GetBrowseNodesResource', 'model/GetBrowseNodesResponse', 'model/GetItemsRequest', 'model/GetItemsResource', 'model/GetItemsResponse', 'model/GetVariationsRequest', 'model/GetVariationsResource', 'model/GetVariationsResponse', 'model/ImageSize', 'model/ImageType', 'model/Images', 'model/Item', 'model/ItemIdType', 'model/ItemInfo', 'model/ItemsResult', 'model/LanguageType', 'model/Languages', 'model/ManufactureInfo', 'model/MaxPrice', 'model/Merchant', 'model/MinPrice', 'model/MinReviewsRating', 'model/MinSavingPercent', 'model/MultiValuedAttribute', 'model/OfferAvailability', 'model/OfferCondition', 'model/OfferConditionNote', 'model/OfferCount', 'model/OfferDeliveryInfo', 'model/OfferListing', 'model/OfferLoyaltyPoints', 'model/OfferMerchantInfo', 'model/OfferPrice', 'model/OfferProgramEligibility', 'model/OfferPromotion', 'model/OfferSavings', 'model/OfferShippingCharge', 'model/OfferSubCondition', 'model/OfferSummary', 'model/Offers', 'model/PartnerType', 'model/Price', 'model/ProductAdvertisingAPIClientException', 'model/ProductAdvertisingAPIServiceException', 'model/ProductInfo', 'model/Properties', 'model/Rating', 'model/Refinement', 'model/RefinementBin', 'model/RentalOfferListing', 'model/RentalOffers', 'model/SearchItemsRequest', 'model/SearchItemsResource', 'model/SearchItemsResponse', 'model/SearchRefinements', 'model/SearchResult', 'model/SingleBooleanValuedAttribute', 'model/SingleIntegerValuedAttribute', 'model/SingleStringValuedAttribute', 'model/SortBy', 'model/TechnicalInfo', 'model/TradeInInfo', 'model/TradeInPrice', 'model/UnitBasedAttribute', 'model/VariationAttribute', 'model/VariationDimension', 'model/VariationSummary', 'model/VariationsResult', 'model/WebsiteSalesRank', 'api/DefaultApi'], factory);
+    define(['ApiClient', 'model/Availability', 'model/BigDecimal', 'model/BrowseNode', 'model/BrowseNodeAncestor', 'model/BrowseNodeChild', 'model/BrowseNodeInfo', 'model/BrowseNodesResult', 'model/ByLineInfo', 'model/Classifications', 'model/Condition', 'model/ContentInfo', 'model/ContentRating', 'model/Contributor', 'model/CustomerReviews', 'model/DealDetails', 'model/DeliveryFlag', 'model/DimensionBasedAttribute', 'model/DurationPrice', 'model/ErrorData', 'model/ExternalIds', 'model/GetBrowseNodesRequest', 'model/GetBrowseNodesResource', 'model/GetBrowseNodesResponse', 'model/GetItemsRequest', 'model/GetItemsResource', 'model/GetItemsResponse', 'model/GetVariationsRequest', 'model/GetVariationsResource', 'model/GetVariationsResponse', 'model/ImageSize', 'model/ImageType', 'model/Images', 'model/Item', 'model/ItemIdType', 'model/ItemInfo', 'model/ItemsResult', 'model/LanguageType', 'model/Languages', 'model/ManufactureInfo', 'model/MaxPrice', 'model/Merchant', 'model/MinPrice', 'model/MinReviewsRating', 'model/MinSavingPercent', 'model/Money', 'model/MultiValuedAttribute', 'model/OfferAvailability', 'model/OfferAvailabilityV2', 'model/OfferCondition', 'model/OfferConditionNote', 'model/OfferConditionV2', 'model/OfferCount', 'model/OfferDeliveryInfo', 'model/OfferListing', 'model/OfferListingV2', 'model/OfferListings', 'model/OfferListingsV2', 'model/OfferLoyaltyPoints', 'model/OfferLoyaltyPointsV2', 'model/OfferMerchantInfo', 'model/OfferMerchantInfoV2', 'model/OfferPrice', 'model/OfferPriceV2', 'model/OfferProgramEligibility', 'model/OfferPromotion', 'model/OfferSavingBasis', 'model/OfferSavings', 'model/OfferSavingsV2', 'model/OfferShippingCharge', 'model/OfferSubCondition', 'model/OfferSummary', 'model/OfferType', 'model/Offers', 'model/OffersV2', 'model/PartnerType', 'model/Price', 'model/PriceType', 'model/ProductAdvertisingAPIClientException', 'model/ProductAdvertisingAPIServiceException', 'model/ProductInfo', 'model/Properties', 'model/Rating', 'model/Refinement', 'model/RefinementBin', 'model/RentalOfferListing', 'model/RentalOffers', 'model/SavingBasisType', 'model/SearchIndex', 'model/SearchItemsRequest', 'model/SearchItemsResource', 'model/SearchItemsResponse', 'model/SearchRefinements', 'model/SearchResult', 'model/SingleBooleanValuedAttribute', 'model/SingleIntegerValuedAttribute', 'model/SingleStringValuedAttribute', 'model/SortBy', 'model/TechnicalInfo', 'model/TradeInInfo', 'model/TradeInPrice', 'model/UnitBasedAttribute', 'model/VariationAttribute', 'model/VariationDimension', 'model/VariationSummary', 'model/VariationsResult', 'model/WebsiteSalesRank', 'api/DefaultApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/Availability'), require('./model/BrowseNode'), require('./model/BrowseNodeAncestor'), require('./model/BrowseNodeChild'), require('./model/BrowseNodeInfo'), require('./model/BrowseNodesResult'), require('./model/ByLineInfo'), require('./model/Classifications'), require('./model/Condition'), require('./model/ContentInfo'), require('./model/ContentRating'), require('./model/Contributor'), require('./model/CustomerReviews'), require('./model/DeliveryFlag'), require('./model/DimensionBasedAttribute'), require('./model/DurationPrice'), require('./model/ErrorData'), require('./model/ExternalIds'), require('./model/GetBrowseNodesRequest'), require('./model/GetBrowseNodesResource'), require('./model/GetBrowseNodesResponse'), require('./model/GetItemsRequest'), require('./model/GetItemsResource'), require('./model/GetItemsResponse'), require('./model/GetVariationsRequest'), require('./model/GetVariationsResource'), require('./model/GetVariationsResponse'), require('./model/ImageSize'), require('./model/ImageType'), require('./model/Images'), require('./model/Item'), require('./model/ItemIdType'), require('./model/ItemInfo'), require('./model/ItemsResult'), require('./model/LanguageType'), require('./model/Languages'), require('./model/ManufactureInfo'), require('./model/MaxPrice'), require('./model/Merchant'), require('./model/MinPrice'), require('./model/MinReviewsRating'), require('./model/MinSavingPercent'), require('./model/MultiValuedAttribute'), require('./model/OfferAvailability'), require('./model/OfferCondition'), require('./model/OfferConditionNote'), require('./model/OfferCount'), require('./model/OfferDeliveryInfo'), require('./model/OfferListing'), require('./model/OfferLoyaltyPoints'), require('./model/OfferMerchantInfo'), require('./model/OfferPrice'), require('./model/OfferProgramEligibility'), require('./model/OfferPromotion'), require('./model/OfferSavings'), require('./model/OfferShippingCharge'), require('./model/OfferSubCondition'), require('./model/OfferSummary'), require('./model/Offers'), require('./model/PartnerType'), require('./model/Price'), require('./model/ProductAdvertisingAPIClientException'), require('./model/ProductAdvertisingAPIServiceException'), require('./model/ProductInfo'), require('./model/Properties'), require('./model/Rating'), require('./model/Refinement'), require('./model/RefinementBin'), require('./model/RentalOfferListing'), require('./model/RentalOffers'), require('./model/SearchItemsRequest'), require('./model/SearchItemsResource'), require('./model/SearchItemsResponse'), require('./model/SearchRefinements'), require('./model/SearchResult'), require('./model/SingleBooleanValuedAttribute'), require('./model/SingleIntegerValuedAttribute'), require('./model/SingleStringValuedAttribute'), require('./model/SortBy'), require('./model/TechnicalInfo'), require('./model/TradeInInfo'), require('./model/TradeInPrice'), require('./model/UnitBasedAttribute'), require('./model/VariationAttribute'), require('./model/VariationDimension'), require('./model/VariationSummary'), require('./model/VariationsResult'), require('./model/WebsiteSalesRank'), require('./api/DefaultApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/Availability'), require('./model/BigDecimal'), require('./model/BrowseNode'), require('./model/BrowseNodeAncestor'), require('./model/BrowseNodeChild'), require('./model/BrowseNodeInfo'), require('./model/BrowseNodesResult'), require('./model/ByLineInfo'), require('./model/Classifications'), require('./model/Condition'), require('./model/ContentInfo'), require('./model/ContentRating'), require('./model/Contributor'), require('./model/CustomerReviews'), require('./model/DealDetails'), require('./model/DeliveryFlag'), require('./model/DimensionBasedAttribute'), require('./model/DurationPrice'), require('./model/ErrorData'), require('./model/ExternalIds'), require('./model/GetBrowseNodesRequest'), require('./model/GetBrowseNodesResource'), require('./model/GetBrowseNodesResponse'), require('./model/GetItemsRequest'), require('./model/GetItemsResource'), require('./model/GetItemsResponse'), require('./model/GetVariationsRequest'), require('./model/GetVariationsResource'), require('./model/GetVariationsResponse'), require('./model/ImageSize'), require('./model/ImageType'), require('./model/Images'), require('./model/Item'), require('./model/ItemIdType'), require('./model/ItemInfo'), require('./model/ItemsResult'), require('./model/LanguageType'), require('./model/Languages'), require('./model/ManufactureInfo'), require('./model/MaxPrice'), require('./model/Merchant'), require('./model/MinPrice'), require('./model/MinReviewsRating'), require('./model/MinSavingPercent'), require('./model/Money'), require('./model/MultiValuedAttribute'), require('./model/OfferAvailability'), require('./model/OfferAvailabilityV2'), require('./model/OfferCondition'), require('./model/OfferConditionNote'), require('./model/OfferConditionV2'), require('./model/OfferCount'), require('./model/OfferDeliveryInfo'), require('./model/OfferListing'), require('./model/OfferListingV2'), require('./model/OfferListings'), require('./model/OfferListingsV2'), require('./model/OfferLoyaltyPoints'), require('./model/OfferLoyaltyPointsV2'), require('./model/OfferMerchantInfo'), require('./model/OfferMerchantInfoV2'), require('./model/OfferPrice'), require('./model/OfferPriceV2'), require('./model/OfferProgramEligibility'), require('./model/OfferPromotion'), require('./model/OfferSavingBasis'), require('./model/OfferSavings'), require('./model/OfferSavingsV2'), require('./model/OfferShippingCharge'), require('./model/OfferSubCondition'), require('./model/OfferSummary'), require('./model/OfferType'), require('./model/Offers'), require('./model/OffersV2'), require('./model/PartnerType'), require('./model/Price'), require('./model/PriceType'), require('./model/ProductAdvertisingAPIClientException'), require('./model/ProductAdvertisingAPIServiceException'), require('./model/ProductInfo'), require('./model/Properties'), require('./model/Rating'), require('./model/Refinement'), require('./model/RefinementBin'), require('./model/RentalOfferListing'), require('./model/RentalOffers'), require('./model/SavingBasisType'), require('./model/SearchIndex'), require('./model/SearchItemsRequest'), require('./model/SearchItemsResource'), require('./model/SearchItemsResponse'), require('./model/SearchRefinements'), require('./model/SearchResult'), require('./model/SingleBooleanValuedAttribute'), require('./model/SingleIntegerValuedAttribute'), require('./model/SingleStringValuedAttribute'), require('./model/SortBy'), require('./model/TechnicalInfo'), require('./model/TradeInInfo'), require('./model/TradeInPrice'), require('./model/UnitBasedAttribute'), require('./model/VariationAttribute'), require('./model/VariationDimension'), require('./model/VariationSummary'), require('./model/VariationsResult'), require('./model/WebsiteSalesRank'), require('./api/DefaultApi'));
   }
-}(function(ApiClient, Availability, BrowseNode, BrowseNodeAncestor, BrowseNodeChild, BrowseNodeInfo, BrowseNodesResult, ByLineInfo, Classifications, Condition, ContentInfo, ContentRating, Contributor, CustomerReviews, DeliveryFlag, DimensionBasedAttribute, DurationPrice, ErrorData, ExternalIds, GetBrowseNodesRequest, GetBrowseNodesResource, GetBrowseNodesResponse, GetItemsRequest, GetItemsResource, GetItemsResponse, GetVariationsRequest, GetVariationsResource, GetVariationsResponse, ImageSize, ImageType, Images, Item, ItemIdType, ItemInfo, ItemsResult, LanguageType, Languages, ManufactureInfo, MaxPrice, Merchant, MinPrice, MinReviewsRating, MinSavingPercent, MultiValuedAttribute, OfferAvailability, OfferCondition, OfferConditionNote, OfferCount, OfferDeliveryInfo, OfferListing, OfferLoyaltyPoints, OfferMerchantInfo, OfferPrice, OfferProgramEligibility, OfferPromotion, OfferSavings, OfferShippingCharge, OfferSubCondition, OfferSummary, Offers, PartnerType, Price, ProductAdvertisingAPIClientException, ProductAdvertisingAPIServiceException, ProductInfo, Properties, Rating, Refinement, RefinementBin, RentalOfferListing, RentalOffers, SearchItemsRequest, SearchItemsResource, SearchItemsResponse, SearchRefinements, SearchResult, SingleBooleanValuedAttribute, SingleIntegerValuedAttribute, SingleStringValuedAttribute, SortBy, TechnicalInfo, TradeInInfo, TradeInPrice, UnitBasedAttribute, VariationAttribute, VariationDimension, VariationSummary, VariationsResult, WebsiteSalesRank, DefaultApi) {
+}(function(ApiClient, Availability, BigDecimal, BrowseNode, BrowseNodeAncestor, BrowseNodeChild, BrowseNodeInfo, BrowseNodesResult, ByLineInfo, Classifications, Condition, ContentInfo, ContentRating, Contributor, CustomerReviews, DealDetails, DeliveryFlag, DimensionBasedAttribute, DurationPrice, ErrorData, ExternalIds, GetBrowseNodesRequest, GetBrowseNodesResource, GetBrowseNodesResponse, GetItemsRequest, GetItemsResource, GetItemsResponse, GetVariationsRequest, GetVariationsResource, GetVariationsResponse, ImageSize, ImageType, Images, Item, ItemIdType, ItemInfo, ItemsResult, LanguageType, Languages, ManufactureInfo, MaxPrice, Merchant, MinPrice, MinReviewsRating, MinSavingPercent, Money, MultiValuedAttribute, OfferAvailability, OfferAvailabilityV2, OfferCondition, OfferConditionNote, OfferConditionV2, OfferCount, OfferDeliveryInfo, OfferListing, OfferListingV2, OfferListings, OfferListingsV2, OfferLoyaltyPoints, OfferLoyaltyPointsV2, OfferMerchantInfo, OfferMerchantInfoV2, OfferPrice, OfferPriceV2, OfferProgramEligibility, OfferPromotion, OfferSavingBasis, OfferSavings, OfferSavingsV2, OfferShippingCharge, OfferSubCondition, OfferSummary, OfferType, Offers, OffersV2, PartnerType, Price, PriceType, ProductAdvertisingAPIClientException, ProductAdvertisingAPIServiceException, ProductInfo, Properties, Rating, Refinement, RefinementBin, RentalOfferListing, RentalOffers, SavingBasisType, SearchIndex, SearchItemsRequest, SearchItemsResource, SearchItemsResponse, SearchRefinements, SearchResult, SingleBooleanValuedAttribute, SingleIntegerValuedAttribute, SingleStringValuedAttribute, SortBy, TechnicalInfo, TradeInInfo, TradeInPrice, UnitBasedAttribute, VariationAttribute, VariationDimension, VariationSummary, VariationsResult, WebsiteSalesRank, DefaultApi) {
   'use strict';
 
   /**
@@ -72,6 +72,11 @@
      * @property {module:model/Availability}
      */
     Availability: Availability,
+    /**
+     * The BigDecimal model constructor.
+     * @property {module:model/BigDecimal}
+     */
+    BigDecimal: BigDecimal,
     /**
      * The BrowseNode model constructor.
      * @property {module:model/BrowseNode}
@@ -132,6 +137,11 @@
      * @property {module:model/CustomerReviews}
      */
     CustomerReviews: CustomerReviews,
+    /**
+     * The DealDetails model constructor.
+     * @property {module:model/DealDetails}
+     */
+    DealDetails: DealDetails,
     /**
      * The DeliveryFlag model constructor.
      * @property {module:model/DeliveryFlag}
@@ -278,6 +288,11 @@
      */
     MinSavingPercent: MinSavingPercent,
     /**
+     * The Money model constructor.
+     * @property {module:model/Money}
+     */
+    Money: Money,
+    /**
      * The MultiValuedAttribute model constructor.
      * @property {module:model/MultiValuedAttribute}
      */
@@ -288,6 +303,11 @@
      */
     OfferAvailability: OfferAvailability,
     /**
+     * The OfferAvailabilityV2 model constructor.
+     * @property {module:model/OfferAvailabilityV2}
+     */
+    OfferAvailabilityV2: OfferAvailabilityV2,
+    /**
      * The OfferCondition model constructor.
      * @property {module:model/OfferCondition}
      */
@@ -297,6 +317,11 @@
      * @property {module:model/OfferConditionNote}
      */
     OfferConditionNote: OfferConditionNote,
+    /**
+     * The OfferConditionV2 model constructor.
+     * @property {module:model/OfferConditionV2}
+     */
+    OfferConditionV2: OfferConditionV2,
     /**
      * The OfferCount model constructor.
      * @property {module:model/OfferCount}
@@ -313,20 +338,50 @@
      */
     OfferListing: OfferListing,
     /**
+     * The OfferListingV2 model constructor.
+     * @property {module:model/OfferListingV2}
+     */
+    OfferListingV2: OfferListingV2,
+    /**
+     * The OfferListings model constructor.
+     * @property {module:model/OfferListings}
+     */
+    OfferListings: OfferListings,
+    /**
+     * The OfferListingsV2 model constructor.
+     * @property {module:model/OfferListingsV2}
+     */
+    OfferListingsV2: OfferListingsV2,
+    /**
      * The OfferLoyaltyPoints model constructor.
      * @property {module:model/OfferLoyaltyPoints}
      */
     OfferLoyaltyPoints: OfferLoyaltyPoints,
+    /**
+     * The OfferLoyaltyPointsV2 model constructor.
+     * @property {module:model/OfferLoyaltyPointsV2}
+     */
+    OfferLoyaltyPointsV2: OfferLoyaltyPointsV2,
     /**
      * The OfferMerchantInfo model constructor.
      * @property {module:model/OfferMerchantInfo}
      */
     OfferMerchantInfo: OfferMerchantInfo,
     /**
+     * The OfferMerchantInfoV2 model constructor.
+     * @property {module:model/OfferMerchantInfoV2}
+     */
+    OfferMerchantInfoV2: OfferMerchantInfoV2,
+    /**
      * The OfferPrice model constructor.
      * @property {module:model/OfferPrice}
      */
     OfferPrice: OfferPrice,
+    /**
+     * The OfferPriceV2 model constructor.
+     * @property {module:model/OfferPriceV2}
+     */
+    OfferPriceV2: OfferPriceV2,
     /**
      * The OfferProgramEligibility model constructor.
      * @property {module:model/OfferProgramEligibility}
@@ -338,10 +393,20 @@
      */
     OfferPromotion: OfferPromotion,
     /**
+     * The OfferSavingBasis model constructor.
+     * @property {module:model/OfferSavingBasis}
+     */
+    OfferSavingBasis: OfferSavingBasis,
+    /**
      * The OfferSavings model constructor.
      * @property {module:model/OfferSavings}
      */
     OfferSavings: OfferSavings,
+    /**
+     * The OfferSavingsV2 model constructor.
+     * @property {module:model/OfferSavingsV2}
+     */
+    OfferSavingsV2: OfferSavingsV2,
     /**
      * The OfferShippingCharge model constructor.
      * @property {module:model/OfferShippingCharge}
@@ -358,10 +423,20 @@
      */
     OfferSummary: OfferSummary,
     /**
+     * The OfferType model constructor.
+     * @property {module:model/OfferType}
+     */
+    OfferType: OfferType,
+    /**
      * The Offers model constructor.
      * @property {module:model/Offers}
      */
     Offers: Offers,
+    /**
+     * The OffersV2 model constructor.
+     * @property {module:model/OffersV2}
+     */
+    OffersV2: OffersV2,
     /**
      * The PartnerType model constructor.
      * @property {module:model/PartnerType}
@@ -372,6 +447,11 @@
      * @property {module:model/Price}
      */
     Price: Price,
+    /**
+     * The PriceType model constructor.
+     * @property {module:model/PriceType}
+     */
+    PriceType: PriceType,
     /**
      * The ProductAdvertisingAPIClientException model constructor.
      * @property {module:model/ProductAdvertisingAPIClientException}
@@ -417,6 +497,16 @@
      * @property {module:model/RentalOffers}
      */
     RentalOffers: RentalOffers,
+    /**
+     * The SavingBasisType model constructor.
+     * @property {module:model/SavingBasisType}
+     */
+    SavingBasisType: SavingBasisType,
+    /**
+     * The SearchIndex model constructor.
+     * @property {module:model/SearchIndex}
+     */
+    SearchIndex: SearchIndex,
     /**
      * The SearchItemsRequest model constructor.
      * @property {module:model/SearchItemsRequest}

@@ -1,5 +1,5 @@
 /**
- * Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -22,18 +22,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/BrowseNodeInfo', 'model/CustomerReviews', 'model/Images', 'model/ItemInfo', 'model/Offers', 'model/RentalOffers', 'model/VariationAttribute'], factory);
+    define(['ApiClient', 'model/BrowseNodeInfo', 'model/CustomerReviews', 'model/Images', 'model/ItemInfo', 'model/Offers', 'model/OffersV2', 'model/RentalOffers', 'model/VariationAttribute'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./BrowseNodeInfo'), require('./CustomerReviews'), require('./Images'), require('./ItemInfo'), require('./Offers'), require('./RentalOffers'), require('./VariationAttribute'));
+    module.exports = factory(require('../ApiClient'), require('./BrowseNodeInfo'), require('./CustomerReviews'), require('./Images'), require('./ItemInfo'), require('./Offers'), require('./OffersV2'), require('./RentalOffers'), require('./VariationAttribute'));
   } else {
     // Browser globals (root is window)
     if (!root.ProductAdvertisingAPIv1) {
       root.ProductAdvertisingAPIv1 = {};
     }
-    root.ProductAdvertisingAPIv1.Item = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.BrowseNodeInfo, root.ProductAdvertisingAPIv1.CustomerReviews, root.ProductAdvertisingAPIv1.Images, root.ProductAdvertisingAPIv1.ItemInfo, root.ProductAdvertisingAPIv1.Offers, root.ProductAdvertisingAPIv1.RentalOffers, root.ProductAdvertisingAPIv1.VariationAttribute);
+    root.ProductAdvertisingAPIv1.Item = factory(root.ProductAdvertisingAPIv1.ApiClient, root.ProductAdvertisingAPIv1.BrowseNodeInfo, root.ProductAdvertisingAPIv1.CustomerReviews, root.ProductAdvertisingAPIv1.Images, root.ProductAdvertisingAPIv1.ItemInfo, root.ProductAdvertisingAPIv1.Offers, root.ProductAdvertisingAPIv1.OffersV2, root.ProductAdvertisingAPIv1.RentalOffers, root.ProductAdvertisingAPIv1.VariationAttribute);
   }
-}(this, function(ApiClient, BrowseNodeInfo, CustomerReviews, Images, ItemInfo, Offers, RentalOffers, VariationAttribute) {
+}(this, function(ApiClient, BrowseNodeInfo, CustomerReviews, Images, ItemInfo, Offers, OffersV2, RentalOffers, VariationAttribute) {
   'use strict';
 
 
@@ -52,6 +52,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -98,6 +99,9 @@
       if (data.hasOwnProperty('Offers')) {
         obj['Offers'] = Offers.constructFromObject(data['Offers']);
       }
+      if (data.hasOwnProperty('OffersV2')) {
+        obj['OffersV2'] = OffersV2.constructFromObject(data['OffersV2']);
+      }
       if (data.hasOwnProperty('ParentASIN')) {
         obj['ParentASIN'] = ApiClient.convertToType(data['ParentASIN'], 'String');
       }
@@ -142,6 +146,10 @@
    * @member {module:model/Offers} Offers
    */
   exports.prototype['Offers'] = undefined;
+  /**
+   * @member {module:model/OffersV2} OffersV2
+   */
+  exports.prototype['OffersV2'] = undefined;
   /**
    * @member {String} ParentASIN
    */

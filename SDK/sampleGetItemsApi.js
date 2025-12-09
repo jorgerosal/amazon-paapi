@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2025 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -47,7 +47,7 @@ getItemsRequest['PartnerTag'] = '<YOUR PARTNER TAG>';
 getItemsRequest['PartnerType'] = 'Associates';
 
 /** Enter the Item IDs for which item information is desired */
-getItemsRequest['ItemIds'] = ['059035342X', 'B00X4WHP5E', 'B00ZV9RDKK'];
+getItemsRequest['ItemIds'] =  ['B09BWFX1L6', 'B0CFPJYX7P'];
 
 getItemsRequest['Condition'] = 'New';
 
@@ -55,7 +55,7 @@ getItemsRequest['Condition'] = 'New';
  * Choose resources you want from GetItemsResource enum
  * For more details, refer: https://webservices.amazon.com/paapi5/documentation/get-items.html#resources-parameter
  */
-getItemsRequest['Resources'] = ['Images.Primary.Medium', 'ItemInfo.Title', 'Offers.Listings.Price'];
+getItemsRequest['Resources'] = ['Images.Primary.Medium', 'ItemInfo.Title', 'OffersV2.Listings.Price'];
 
 /**
  * Function to parse GetItemsResponse into an object with key as ASIN
@@ -98,12 +98,14 @@ function onSuccess(data) {
               console.log('Title: ' + item['ItemInfo']['Title']['DisplayValue']);
             }
             if (
-              item['Offers'] !== undefined &&
-              item['Offers']['Listings'] !== undefined &&
-              item['Offers']['Listings'][0]['Price'] !== undefined &&
-              item['Offers']['Listings'][0]['Price']['DisplayAmount'] !== undefined
+              item['OffersV2'] !== undefined &&
+              item['OffersV2']['Listings'] !== undefined &&
+              item['OffersV2']['Listings'][0] !== undefined &&
+              item['OffersV2']['Listings'][0]['Price'] !== undefined &&
+              item['OffersV2']['Listings'][0]['Price']['Money'] !== undefined &&
+              item['OffersV2']['Listings'][0]['Price']['Money']['DisplayAmount'] !== undefined
             ) {
-              console.log('Buying Price: ' + item['Offers']['Listings'][0]['Price']['DisplayAmount']);
+              console.log('Buying Price: ' + item['OffersV2']['Listings'][0]['Price']['Money']['DisplayAmount']);
             }
           }
         } else {
