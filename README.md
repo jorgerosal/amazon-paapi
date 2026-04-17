@@ -1,9 +1,48 @@
+<div align="center">
+
 # amazon-paapi
 
+**Amazon Associate Product Advertising API for Node.js**  
+Simple wrapper around Amazon's PA-API SDK with a scratchpad-style developer experience.
+
 [![npm version](https://badge.fury.io/js/amazon-paapi.svg)](https://badge.fury.io/js/amazon-paapi)
-[![NPM](https://nodei.co/npm/amazon-paapi.png)](https://nodei.co/npm/amazon-paapi/)
 [![npm downloads](https://img.shields.io/npm/dm/amazon-paapi.svg)](https://www.npmjs.com/package/amazon-paapi)
 [![npm total downloads](https://img.shields.io/npm/dt/amazon-paapi.svg)](https://www.npmjs.com/package/amazon-paapi)
+[![license](https://img.shields.io/npm/l/amazon-paapi.svg)](https://github.com/jorgerosal/amazon-paapi/blob/master/LICENSE)
+
+</div>
+
+---
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>Install</h3>
+      <pre><code>npm install amazon-paapi</code></pre>
+      <p>Published on <a href="https://www.npmjs.com/package/amazon-paapi">npm</a> as <code>amazon-paapi</code>.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>What's New in v1.1.0</h3>
+      <ul>
+        <li>Additive <code>GetItemsV2</code>, <code>GetVariationsV2</code>, and <code>SearchItemsV2</code> helpers</li>
+        <li>Migration path for Amazon <code>OffersV2</code> resources</li>
+        <li>Legacy methods preserved for existing integrations</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<div align="center">
+  <sub>
+    <a href="#installation">Installation</a> •
+    <a href="#quickstart">Quickstart</a> •
+    <a href="#usage">Usage</a> •
+    <a href="#offers-v2-migration">Offers v2 Migration</a> •
+    <a href="#faq">FAQ</a>
+  </sub>
+</div>
+
+<br />
 
 <div align="center">
   <h2>News: Updated for Offers V2</h2>
