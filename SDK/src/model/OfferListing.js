@@ -1,5 +1,5 @@
 /**
- * Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@
   /**
    * The OfferListing model module.
    * @module model/OfferListing
-   * @version 1.0.0
+   * @version 1.2.4
    */
 
   /**

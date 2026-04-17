@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -47,7 +47,7 @@ getVariationsRequest['PartnerTag'] = '<YOUR PARTNER TAG>';
 getVariationsRequest['PartnerType'] = 'Associates';
 
 /** Specify ASIN for which variations are desired */
-getVariationsRequest['ASIN'] = 'B07H65KP63';
+getVariationsRequest['ASIN'] = 'B0DLFMFBJW';
 
 /**
  * Choose resources you want from GetVariationsResource enum
@@ -56,7 +56,14 @@ getVariationsRequest['ASIN'] = 'B07H65KP63';
 getVariationsRequest['Resources'] = [
   'Images.Primary.Medium',
   'ItemInfo.Title',
-  'Offers.Listings.Price',
+  'OffersV2.Listings.Availability',
+  'OffersV2.Listings.Condition',
+  'OffersV2.Listings.DealDetails',
+  'OffersV2.Listings.IsBuyBoxWinner',
+  'OffersV2.Listings.LoyaltyPoints',
+  'OffersV2.Listings.MerchantInfo',
+  'OffersV2.Listings.Price',
+  'OffersV2.Listings.Type',
   'VariationSummary.VariationDimension'
 ];
 
@@ -90,12 +97,14 @@ function onSuccess(data) {
         console.log('Title: ' + item_0['ItemInfo']['Title']['DisplayValue']);
       }
       if (
-        item_0['Offers'] !== undefined &&
-        item_0['Offers']['Listings'] !== undefined &&
-        item_0['Offers']['Listings'][0]['Price'] !== undefined &&
-        item_0['Offers']['Listings'][0]['Price']['DisplayAmount'] !== undefined
+        item_0['OffersV2'] !== undefined &&
+        item_0['OffersV2']['Listings'] !== undefined &&
+        item_0['OffersV2']['Listings'].length > 0 &&
+        item_0['OffersV2']['Listings'][0]['Price'] !== undefined &&
+        item_0['OffersV2']['Listings'][0]['Price']['Money'] !== undefined &&
+        item_0['OffersV2']['Listings'][0]['Price']['Money']['DisplayAmount'] !== undefined
       ) {
-        console.log('Buying Price: ' + item_0['Offers']['Listings'][0]['Price']['DisplayAmount']);
+        console.log('Buying Price: ' + item_0['OffersV2']['Listings'][0]['Price']['Money']['DisplayAmount']);
       }
     }
   }

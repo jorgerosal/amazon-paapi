@@ -1,5 +1,5 @@
 /**
- * Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -337,7 +337,47 @@
      * value: "RentalOffers.Listings.MerchantInfo"
      * @const
      */
-    "RentalOffers.Listings.MerchantInfo": "RentalOffers.Listings.MerchantInfo"  };
+    "RentalOffers.Listings.MerchantInfo": "RentalOffers.Listings.MerchantInfo",
+    /**
+     * value: "OffersV2.Listings.Availability"
+     * @const
+     */
+    "OffersV2.Listings.Availability": "OffersV2.Listings.Availability",
+    /**
+     * value: "OffersV2.Listings.Condition"
+     * @const
+     */
+    "OffersV2.Listings.Condition": "OffersV2.Listings.Condition",
+    /**
+     * value: "OffersV2.Listings.DealDetails"
+     * @const
+     */
+    "OffersV2.Listings.DealDetails": "OffersV2.Listings.DealDetails",
+    /**
+     * value: "OffersV2.Listings.IsBuyBoxWinner"
+     * @const
+     */
+    "OffersV2.Listings.IsBuyBoxWinner": "OffersV2.Listings.IsBuyBoxWinner",
+    /**
+     * value: "OffersV2.Listings.LoyaltyPoints"
+     * @const
+     */
+    "OffersV2.Listings.LoyaltyPoints": "OffersV2.Listings.LoyaltyPoints",
+    /**
+     * value: "OffersV2.Listings.MerchantInfo"
+     * @const
+     */
+    "OffersV2.Listings.MerchantInfo": "OffersV2.Listings.MerchantInfo",
+    /**
+     * value: "OffersV2.Listings.Price"
+     * @const
+     */
+    "OffersV2.Listings.Price": "OffersV2.Listings.Price",
+    /**
+     * value: "OffersV2.Listings.Type"
+     * @const
+     */
+    "OffersV2.Listings.Type": "OffersV2.Listings.Type"  };
 
   /**
    * Returns a <code>GetItemsResource</code> enum value from a Javascript object name.
