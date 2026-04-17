@@ -9,6 +9,18 @@
   },
   "author": "Jorge Rosal",
   "license": "MIT",
+  "files": [
+    "app.js",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "marketplace.json",
+    "SDK/src",
+    "SDK/LICENSE.txt",
+    "SDK/NOTICE.txt",
+    "SDK/COPYING.txt",
+    "sample"
+  ],
   "bugs": {
     "url": "https://github.com/jorgerosal/amazon-paapi/issues"
   },

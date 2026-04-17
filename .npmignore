@@ -1,0 +1,13 @@
+node_modules/
+SDK/node_modules/
+.git/
+.github/
+.DS_Store
+SDK/.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env.*
+*.tgz
