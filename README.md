@@ -62,6 +62,9 @@ Simple wrapper around Amazon's PA-API SDK with a scratchpad-style developer expe
 > npm install amazon-paapi@1.0.7
 > ```
 
+> [!TIP]
+> Use this package in server-side code only. Amazon PA-API requests require your `AccessKey` and `SecretKey`, so this package should be called from Node.js, API routes, server actions, or backend services rather than directly from browser/client-side React components.
+
 Amazon Associate Product Advertising API for NodeJs. A PAAPI 5.0 Extension.
 
 A **clean** wrapper for amazon's [NodeJs SDK.](https://webservices.amazon.com/paapi5/documentation/with-sdk.html#nodejs) Main purpose of this module is to jumpstart development with easy to understand and clean syntax inspired with the amazon [scratchpad](https://webservices.amazon.com/paapi5/scratchpad/index.html)-like operation.
