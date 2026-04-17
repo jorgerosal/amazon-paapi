@@ -1,4 +1,15 @@
 ## Change Log
+    1.1.0 Apr 17, 2026
+
+-  Amazon SDK package update
+-  Add compatibility-safe `GetItemsV2`, `GetVariationsV2`, and `SearchItemsV2` helpers
+-  Keep existing `GetItems`, `GetVariations`, and `SearchItems` methods unchanged for legacy users
+-  Update README and samples to use `OffersV2` resources by default
+
+    1.0.8 Nov 10, 2022
+
+- Belgium Marketplace added and published
+
     1.0.7 August 30, 2022
 
 - Add querystring module from main package.json. legacy dependency used by the SDK.

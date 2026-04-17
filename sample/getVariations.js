@@ -15,13 +15,13 @@ const requestParameters = {
     'Resources' : [
         'Images.Primary.Medium',
         'ItemInfo.Title',
-        'Offers.Listings.Price',
+        'OffersV2.Listings.Price',
         'VariationSummary.VariationDimension'
       ]
 };
 
 /** Promise */
-amazonPaapi.GetVariations(commonParameters, requestParameters)
+amazonPaapi.GetVariationsV2(commonParameters, requestParameters)
     .then(data => {
         // do something with the success response.
         console.log(data);

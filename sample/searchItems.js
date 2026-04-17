@@ -14,11 +14,11 @@ const requestParameters = {
     'Keywords' : 'Harry Potter',
     'SearchIndex' : 'Books',
     'ItemCount' : 2,
-    'Resources': ['Images.Primary.Medium', 'ItemInfo.Title', 'Offers.Listings.Price']
+    'Resources': ['Images.Primary.Medium', 'ItemInfo.Title', 'OffersV2.Listings.Price']
 };
 
 /** Promise */
-amazonPaapi.SearchItems(commonParameters, requestParameters)
+amazonPaapi.SearchItemsV2(commonParameters, requestParameters)
     .then(data => {
         // do something with the success response.
         console.log(data);

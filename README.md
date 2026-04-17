@@ -2,6 +2,26 @@
 
 [![npm version](https://badge.fury.io/js/amazon-paapi.svg)](https://badge.fury.io/js/amazon-paapi)
 [![NPM](https://nodei.co/npm/amazon-paapi.png)](https://nodei.co/npm/amazon-paapi/)
+[![npm downloads](https://img.shields.io/npm/dm/amazon-paapi.svg)](https://www.npmjs.com/package/amazon-paapi)
+[![npm total downloads](https://img.shields.io/npm/dt/amazon-paapi.svg)](https://www.npmjs.com/package/amazon-paapi)
+
+<div align="center">
+  <h2>News: Updated for Offers V2</h2>
+  <p><strong>amazon-paapi now includes compatibility-safe <code>GetItemsV2</code>, <code>GetVariationsV2</code>, and <code>SearchItemsV2</code> helpers.</strong></p>
+  <p>Existing methods stay available for legacy users, while new integrations can move to <code>OffersV2</code> resources right away.</p>
+</div>
+
+> [!IMPORTANT]
+> Amazon has deprecated `Offers` v1 in favor of `OffersV2`. This package now ships with additive v2 helpers so you can migrate without breaking existing applications.
+
+> [!NOTE]
+> This update was reviewed for backward compatibility at the package level, but it was not validated with live Amazon PA-API credentials during release preparation.
+>
+> If you encounter integration issues after upgrading, you can explicitly install the previous stable package version:
+>
+> ```bash
+> npm install amazon-paapi@1.0.7
+> ```
 
 Amazon Associate Product Advertising API for NodeJs. A PAAPI 5.0 Extension.
 
@@ -32,14 +52,14 @@ const requestParameters = {
   ASIN: 'B07H65KP63',
   Resources: [
     'ItemInfo.Title',
-    'Offers.Listings.Price',
+    'OffersV2.Listings.Price',
     'VariationSummary.VariationDimension',
   ],
 };
 
 /** Promise */
 amazonPaapi
-  .GetVariations(commonParameters, requestParameters)
+  .GetVariationsV2(commonParameters, requestParameters)
   .then((data) => {
     // do something with the success response.
     console.log(data);
@@ -63,6 +83,16 @@ const commonParameters = {
   Marketplace: 'www.amazon.com', // Default value is US. Note: Host and Region are predetermined based on the marketplace value. There is no need for you to add Host and Region as soon as you specify the correct Marketplace value. If your region is not US or .com, please make sure you add the correct Marketplace value.
 };
 ```
+
+### Offers v2 Migration
+
+Amazon has deprecated `Offers` v1 resources in favor of `OffersV2`. This package now exposes additive v2 helpers:
+
+- `GetItemsV2`
+- `GetVariationsV2`
+- `SearchItemsV2`
+
+These helpers keep the same request/response flow as the existing methods and upgrade `Offers.*` resource strings to `OffersV2.*` for you. The original `GetItems`, `GetVariations`, and `SearchItems` methods are still available for existing integrations.
 
 ### [GetBrowseNodes](https://webservices.amazon.com/paapi5/documentation/getbrowsenodes.html)
 
@@ -103,13 +133,13 @@ const requestParameters = {
   Resources: [
     'Images.Primary.Medium',
     'ItemInfo.Title',
-    'Offers.Listings.Price',
+    'OffersV2.Listings.Price',
   ],
 };
 
 /** Promise */
 amazonPaapi
-  .GetItems(commonParameters, requestParameters)
+  .GetItemsV2(commonParameters, requestParameters)
   .then((data) => {
     // do something with the success response.
     console.log(data);
@@ -130,14 +160,14 @@ const requestParameters = {
   Resources: [
     'Images.Primary.Medium',
     'ItemInfo.Title',
-    'Offers.Listings.Price',
+    'OffersV2.Listings.Price',
     'VariationSummary.VariationDimension',
   ],
 };
 
 /** Promise */
 amazonPaapi
-  .GetVariations(commonParameters, requestParameters)
+  .GetVariationsV2(commonParameters, requestParameters)
   .then((data) => {
     // do something with the success response.
     console.log(data);
@@ -160,13 +190,13 @@ const requestParameters = {
   Resources: [
     'Images.Primary.Medium',
     'ItemInfo.Title',
-    'Offers.Listings.Price',
+    'OffersV2.Listings.Price',
   ],
 };
 
 /** Promise */
 amazonPaapi
-  .SearchItems(commonParameters, requestParameters)
+  .SearchItemsV2(commonParameters, requestParameters)
   .then((data) => {
     // do something with the success response.
     console.log(data);

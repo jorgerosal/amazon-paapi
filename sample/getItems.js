@@ -17,7 +17,7 @@ const requestParameters = {
     'Resources' : [ /** Array of resources. For more details, refer: https://webservices.amazon.com/paapi5/documentation/get-items.html#resources-parameter */
         // 'Images.Primary.Medium', 
         'ItemInfo.Title',
-        'Offers.Listings.Price'
+        'OffersV2.Listings.Price'
         ]
     // CurrencyOfPreference : , //Optional properties...
     // LanguagesOfPreference : ,
@@ -27,7 +27,7 @@ const requestParameters = {
 };
 
 /** Promise */
-amazonPaapi.GetItems(commonParameters, requestParameters)
+amazonPaapi.GetItemsV2(commonParameters, requestParameters)
     .then(data => {
         // do something with the success response.
         console.log(data);
