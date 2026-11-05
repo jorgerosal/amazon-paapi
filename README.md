@@ -67,7 +67,9 @@ Simple wrapper around Amazon's PA-API SDK with a scratchpad-style developer expe
 
 Amazon Associate Product Advertising API for NodeJs. A PAAPI 5.0 Extension.
 
-A **clean** wrapper for amazon's [NodeJs SDK.](https://webservices.amazon.com/paapi5/documentation/with-sdk.html#nodejs) Main purpose of this module is to jumpstart development with easy to understand and clean syntax inspired with the amazon [scratchpad](https://webservices.amazon.com/paapi5/scratchpad/index.html)-like operation.
+A **clean** wrapper for amazon's [NodeJs SDK.](https://webservices.amazon.com/paapi5/documentation/with-sdk.html#nodejs) Main purpose of this module is to jumpstart development with easy to understand and clean syntax inspired with the amazon scratchpad-like operation.
+
+> **Note:** Amazon has retired PA-API 5.0 together with its official Scratchpad, the old URL now redirects to the deprecation notice. If you have moved to the successor, the Creators API, you can test your Creators API credentials in the browser with [AMZ Scratchpad](https://amzscratchpad.com/), a free alternative. It does not accept PA-API keys.
 
 [![Amazon Product API](https://d15ljbth6loks9.cloudfront.net/assets/logos/paapi5_documentation_logo.png)](https://webservices.amazon.com/paapi5/documentation/)
 
